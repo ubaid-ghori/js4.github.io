@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #111;
+            padding: 20px;
+            color: white;
+        }
+        
+        .logo {
+            font-size: 30px;
+            color: red;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        main {
+            background-color: #000;
+            color: red;
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 33px;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+        
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        iframe {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Netflix</div>
+    </header>
+    <main>
+        <section class="section">
+            <h1>Featured Content</h1>
+            <div class="video-container" onclick="playVideo('HVjjoMvutj4')">
+                <iframe id="video1" src="https://www.youtube.com/embed/HVjjoMvutj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" onclick="playVideo('l1EssrLxt7E')">
+                <iframe id="video2" src="https://www.youtube.com/embed/l1EssrLxt7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="section">
+            <h1>New Videos</h1>
+            <div class="video-container" onclick="playVideo('B7wHpNUUT4Y')">
+                <iframe id="video3" src="https://www.youtube.com/embed/B7wHpNUUT4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" onclick="playVideo('yRpLlJmRo2w')">
+                <iframe id="video4" src="https://www.youtube.com/embed/yRpLlJmRo2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="section">
+            <h1>Trending</h1>
+            <div class="video-container" onclick="playVideo('BsDoLVMnmZs')">
+                <iframe id="video5" src="https://www.youtube.com/embed/BsDoLVMnmZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" onclick="playVideo('QIlI7YquuRY')">
+                <iframe id="video6" src="https://www.youtube.com/embed/QIlI7YquuRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="section">
+            <h1>Popular Videos</h1>
+            <div class="video-container" onclick="playVideo('43q4TMnTtpY')">
+                <iframe id="video7" src="https://www.youtube.com/embed/43q4TMnTtpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" onclick="playVideo('dRNqLqnNEcU')">
+                <iframe id="video8" src="https://www.youtube.com/embed/dRNqLqnNEcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="section">
+            <h1>Popular TV Shows</h1>
+            <div class="video-container" onclick="playVideo('htznIeWKgg8')">
+                <iframe id="video9" src="https://www.youtube.com/embed/htznIeWKgg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" onclick="playVideo('LSBnwokA5Fc')">
+                <iframe id="video10" src="https://www.youtube.com/embed/LSBnwokA5Fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 Netflix. All rights reserved.
+    </footer>
+
+    <script>
+        function playVideo(videoId) {
+            const iframe = document.getElementById(`video${videoId}`);
+            iframe.src += "?autoplay=1";
+        }
+    </script>
+</body>
+</html>
